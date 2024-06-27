@@ -1,0 +1,35 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffffff3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container for the images */
+.image-container {
+    display: flex;
+    gap: 20px; /* Space between images */
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Image styling */
+.image-container img {
+    max-width: 50%;
+    height: 20rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
