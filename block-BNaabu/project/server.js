@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 
 app.use((req, res, next) => {
-  if (req.url === '/admin') {
-    return next(new Error('Unauthorized'));
-  }
+    if (req.url === "admin") {
+      return next("Unauthorized");
+    }
   next();
 });
 
@@ -21,8 +21,7 @@ app.use((req, res, next) => {
 });
 
 app.use((err, req, res, next) => {
-  console.error(err.message);
-  res.status(500).send(`Error: ${err.message}`);
+  res.status(500).send(err);
 });
 
 app.listen(3000, () => {
